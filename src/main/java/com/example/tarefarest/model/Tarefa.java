@@ -13,20 +13,22 @@ public class Tarefa {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String nometarefa;
 	private String dataentrega;
 	private String responsavel;
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	
+	public String getNometarefa() {
+		return nometarefa;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNometarefa(String nometarefa) {
+		this.nometarefa = nometarefa;
 	}
 	public String getDataentrega() {
 		return dataentrega;
@@ -40,14 +42,15 @@ public class Tarefa {
 	public void setResponsavel(String responsavel) {
 		this.responsavel = responsavel;
 	}
+	
 	@Override
 	public String toString() {
-		return "Tarefa [id=" + id + ", nome=" + nome + ", dataentrega=" + dataentrega + ", responsavel=" + responsavel
-				+ "]";
+		return "Tarefa [id=" + id + ", nometarefa=" + nometarefa + ", dataentrega=" + dataentrega + ", responsavel="
+				+ responsavel + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(dataentrega, id, nome, responsavel);
+		return Objects.hash(dataentrega, id, nometarefa, responsavel);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -59,7 +62,7 @@ public class Tarefa {
 			return false;
 		Tarefa other = (Tarefa) obj;
 		return Objects.equals(dataentrega, other.dataentrega) && Objects.equals(id, other.id)
-				&& Objects.equals(nome, other.nome) && Objects.equals(responsavel, other.responsavel);
+				&& Objects.equals(nometarefa, other.nometarefa) && Objects.equals(responsavel, other.responsavel);
 	}
 	
 	

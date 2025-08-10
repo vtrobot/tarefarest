@@ -49,7 +49,7 @@ public class TarafeController {
 
 		return repository.findById(id).map(record -> {
 
-			record.setNome(tarefa.getNome());
+			record.setNometarefa(tarefa.getNometarefa());
 			record.setDataentrega(tarefa.getDataentrega());
 			record.setResponsavel(tarefa.getResponsavel());
 			Tarefa updated = repository.save(record);
